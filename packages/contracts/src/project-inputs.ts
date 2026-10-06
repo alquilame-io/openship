@@ -186,7 +186,7 @@ const ComposeServiceSchema = Type.Object({
   domain: Type.Optional(Type.String({ maxLength: 63 })),
   customDomain: Type.Optional(Type.String({ maxLength: 255 })),
   domainType: Type.Optional(Type.Union([Type.Literal("free"), Type.Literal("custom")])),
-  publicEndpoints: Type.Optional(Type.Array(PublicEndpointSchema, { maxItems: 20 })),
+  publicEndpoints: Type.Optional(Type.Array(PublicEndpointSchema)),
 });
 
 const MonorepoWorkspaceSchema = Type.Object({
